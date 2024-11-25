@@ -1,11 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main (){
-	cout<<"El jugador encarna a un heroe que recorre un calabozo enfrent�ndose"<<endl;
-	cout<<"a una serie de enemigos y tomando decisiones estrategicas para sobrevivir,"<<endl;
-	cout<<"dentro de este mundo las preguntas juegan un papel fundamental buscando determinar"<<endl;
-	cout<<"el valor o la decadencia del heroe. Durante el juego el jugador tendra que"<<endl;
-	cout<<"decidir si luchar o huir, y ganara puntos o perdera vida dependiendo de"<<endl; 
-	cout<<"sus decisiones y de los resultados de los enfrentamientos"<<endl;
-	return 0;
+// Estructura para las estadísticas de un personaje
+struct Estadisticas {
+    int vida;
+    int ataque;
+    int defensa;
 }
+// Prototipos de funciones
+void mostrarEstadisticas(const Estadisticas& jugador, const Estadisticas& enemigo, int nivel);
+int calcularDanio(int ataque, int defensa);
+bool turnoJugador(Estadisticas& enemigo, Estadisticas& jugador);
+bool turnoEnemigo(Estadisticas& jugador, Estadisticas& enemigo);
+void nivelUp(Estadisticas& jugador, int& nivel);
+
+int main() {
+    // Inicialización de datos
+    Estadisticas jugador = {100, 15, 5};  // Vida, ataque, defensa
+    Estadisticas enemigo = {80, 10, 3};
+    int nivel = 1;
