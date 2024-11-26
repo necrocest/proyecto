@@ -26,7 +26,7 @@ void nivelUp(Estadisticas jugador, int nivel){
     cout << "¡Subiste al nivel! " << nivel << "¡Tus estadisticas han mejorado.!"<<endl;
 }
 int main(){ 
-    Estadisticas jugador == {100, 25, 20};
+    Estadisticas jugador == {90, 25, 20};
     Estadisticas enemigo == { 75, 20, 15};
     int nivel = 1; 
     string nombre;
