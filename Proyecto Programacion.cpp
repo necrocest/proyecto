@@ -5,7 +5,7 @@ struct Estadisticas {
     int ataque;
     int defensa;
 };
-// Función para mostrar estadísticas
+// Función para mostrar estadisticas
 void mostrarEstadisticas(const Estadisticas& jugador, const Estadisticas& enemigo, int nivel) {
     cout << "\nJugador - Vida: " << jugador.vida << ", Ataque: " << jugador.ataque 
          << ", Defensa: " << jugador.defensa << ", Nivel: " << nivel << endl;
