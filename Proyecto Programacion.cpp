@@ -22,7 +22,7 @@ void nivelUp(Estadisticas& jugador, int& nivel) {
     jugador.vida += 20;
     jugador.ataque += 5;
     jugador.defensa += 2;
-    cout << "¡Subiste al nivel " << nivel << "! Tus estadisticas han mejorado."<< endl;
+    cout << "¡Subiste al nivel " << nivel << "! Tus estadisticas han mejorado."<<endl;
 }
 // Fnción turno del jugador
 bool turnoJugador(Estadisticas& jugador, Estadisticas& enemigo) {
@@ -99,7 +99,7 @@ void turnoEnemigo(Estadisticas& jugador, const Estadisticas& enemigo){
     cin>>nombre;
     while(nivel<2) {
         enemigo = {60 + (nivel - 1) * 10, 20 + (nivel - 1) * 2, 15 + (nivel - 1)};
-        cout<<"Un nuevo enemigo aparece..."<< nombre<<" debes estar preparado"<endl;
+        cout<<"Un nuevo enemigo aparece..."<< nombre<<" debes estar preparado"<<endl;
         mostrarEstadisticas(jugador, enemigo, nivel);
         // Batalla
         while (enemigo.vida > 0 && jugador.vida > 0) {
