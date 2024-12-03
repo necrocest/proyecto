@@ -5,19 +5,19 @@ struct Estadisticas {
     int ataque;
     int defensa;
 };
-// Función para mostrar estadisticas
+// Funcion para mostrar estadisticas
 void mostrarEstadisticas(const Estadisticas& jugador, const Estadisticas& enemigo, int nivel) {
     cout << "\nJugador - Vida: " << jugador.vida << ", Ataque: " << jugador.ataque 
          << ", Defensa: " << jugador.defensa << ", Nivel: " << nivel << endl;
     cout << "Enemigo - Vida: " << enemigo.vida << ", Ataque: " << enemigo.ataque 
          << ", Defensa: " << enemigo.defensa <<endl;
 }
-// Función para calcular el daño
+// Funcion para calcular el daño
 int calcularDano(int ataque, int defensa) {
     int dano = ataque - defensa;
     return (dano > 0) ? dano : 1;
 }
-// Función para subir de nivel
+// Funcion para subir de nivel
 void nivelUp(Estadisticas& jugador, int& nivel) {
     nivel++;
     jugador.vida += 20;
@@ -25,7 +25,7 @@ void nivelUp(Estadisticas& jugador, int& nivel) {
     jugador.defensa += 2;
     cout << "¡Subiste al nivel " << nivel << "! Tus estadisticas han mejorado."<< endl;
 }
-// Fnción turno del jugador
+// Fncion turno del jugador
 bool turnoJugador(Estadisticas& jugador, Estadisticas& enemigo) {
     int opcion;
     cout << "Es tu turno. ¿Que deseas hacer?" << endl;
@@ -83,7 +83,7 @@ bool turnoJugador(Estadisticas& jugador, Estadisticas& enemigo) {
     }
     return enemigo.vida > 0;
 }
-// Función turno del enemigo
+// Funcion turno del enemigo
 void turnoEnemigo(Estadisticas& jugador, const Estadisticas& enemigo){
     int dano = calcularDano(enemigo.ataque, jugador.defensa);
     jugador.vida -= dano;
